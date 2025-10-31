@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+input, button, a {
+  padding: 10px;
+  margin: 5px;
+}
+
+.search-form, .add-form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}
+
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.reset-btn {
+  background: #ccc;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.delete-btn {
+  background: #ff4d4d;
+}
+
+.delete-btn:hover {
+  background: #d93636;
+}

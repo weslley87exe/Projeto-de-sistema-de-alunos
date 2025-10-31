@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Alunos</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Sistema de Alunos</h1>
+
+    <form action="/buscar" method="get" class="search-form">
+      <input type="text" name="termo" placeholder="Buscar por nome ou matrícula" value="{{ termo or '' }}">
+      <button type="submit">🔍 Buscar</button>
+      <a href="/" class="reset-btn">Limpar</a>
+    </form>
+
+    <h2>Adicionar novo aluno</h2>
+    <form action="/adicionar" method="post" class="add-form">
+      <input type="text" name="nome" placeholder="Nome" required>
+      <input type="number" name="idade" placeholder="Idade" required>
+      <input type="text" name="nota" placeholder="Nota (ex: 9,5)" required>
+      <input type="text" name="matricula" placeholder="Matrícula" required>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <h2>Lista de Alunos</h2>
+    {% if alunos %}
+      <table>
+        <tr>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Nota</th>
+          <th>Matrícula</th>
+          <th>Ações</th>
+        </tr>
+        {% for aluno in alunos %}
+        <tr>
+          <form action="/editar/{{ aluno.matricula }}" method="post">
+            <td><input type="text" name="nome" value="{{ aluno.nome }}"></td>
+            <td><input type="number" name="idade" value="{{ aluno.idade }}"></td>
+            <td><input type="text" name="nota" value="{{ aluno.nota }}"></td>
+            <td><input type="text" name="nova_matricula" value="{{ aluno.matricula }}"></td>
+            <td>
+              <button type="submit">✏️</button>
+              <form action="/deletar/{{ aluno.matricula }}" method="post" style="display:inline;">
+                <button type="submit" class="delete-btn">🗑️</button>
+              </form>
+            </td>
+          </form>
+        </tr>
+        {% endfor %}
+      </table>
+    {% else %}
+      <p>Nenhum aluno encontrado.</p>
+    {% endif %}
+  </div>
+</body>
+</html>

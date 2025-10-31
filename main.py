@@ -5,6 +5,7 @@ from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import crud
+import uvicorn
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "meubanco.db")
@@ -67,3 +68,7 @@ def api_adicionar(aluno: dict):
     if novo_id is None:
         raise HTTPException(status_code=400, detail="Matrícula já existe")
     return {"id": novo_id}
+
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)

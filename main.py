@@ -70,5 +70,5 @@ def api_adicionar(aluno: dict):
     return {"id": novo_id}
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 8000))
+    port = int(os.getenv("PORT", 8000))  # certo
     uvicorn.run(app, host="0.0.0.0", port=port)

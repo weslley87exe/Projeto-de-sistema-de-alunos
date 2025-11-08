@@ -1,18 +1,37 @@
-# API Sistema de Alunos
+<h1 align="center">📊 Dashboard Power BI – Vendas – Paulo Weslley (PW)</h1>
 
-Essa API gerencia um sistema simples de cadastro de alunos.
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Foco-Power%20BI%20%7C%20SQL-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Versão-1.0-lightgrey?style=for-the-badge">
+</p>
 
-## Estrutura
-- **models.py**: Define as tabelas do banco
-- **schemas.py**: Validação de dados (Pydantic)
-- **crud.py**: Funções de Create, Read, Update, Delete
-- **database.py**: Conexão com o banco
-- **main.py**: Entrada da API, define rotas
-- **config.py**: Configurações do projeto
-- **.env.example**: Variáveis de ambiente
+---
 
-## Instalação
+## 🧠 Sobre o Projeto
+Dashboard interativo para **análise de vendas**, conectando **SQL e CSV**, com filtros dinâmicos e medidas DAX.  
+Mostra **KPIs, evolução de vendas e insights visuais**.
 
-1. Criar ambiente virtual:
-```bash
-python -m venv venv
+- Layout profissional e interativo  
+- Filtros dinâmicos e indicadores-chave  
+- Insights visuais para tomadas de decisão  
+
+🔗 [Ver projeto no Power BI](#)  
+🔗 [Ver análise no GitHub Pages](https://weslley87exe.github.io/PW_Portfolio/)
+
+---
+
+## 🌍 English Version
+
+<h3 align="center">📊 Power BI Dashboard – Sales – Paulo Weslley (PW)</h3>
+
+## 🧠 About the Project
+Interactive **sales analysis dashboard** connecting **SQL and CSV** data, with dynamic filters and DAX measures.  
+Shows **KPIs, sales trends, and visual insights**.
+
+- Professional and interactive layout  
+- Dynamic filters and key indicators  
+- Visual insights for decision-making  
+
+🔗 [View Power BI project](#)  
+🔗 [View on GitHub Pages](https://weslley87exe.github.io/PW_Portfolio/)
